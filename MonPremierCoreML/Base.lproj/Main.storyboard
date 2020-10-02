@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MonPremierCoreML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon CoreML" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oo5-Ic-n56">
+                                <rect key="frame" x="20" y="10" width="280" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YjJ-yZ-hfN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YI-li-uJi">
+                                <rect key="frame" x="20" y="388" width="280" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="b9B-Gw-0hX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="xji-fg-f8K">
+                                <rect key="frame" x="40" y="498" width="240" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqp-n2-S29">
+                                        <rect key="frame" x="0.0" y="0.0" width="33" height="50"/>
+                                        <state key="normal" image="camera.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="takeAPic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Xa-E3-DJF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7g-TI-bgj">
+                                        <rect key="frame" x="83" y="0.0" width="157" height="50"/>
+                                        <state key="normal" title="Lancer CoreML"/>
+                                        <connections>
+                                            <action selector="coreMLAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cTS-ck-K2S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LVs-00-Nqb"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ed7-zg-yb1">
+                                <rect key="frame" x="20" y="58" width="280" height="310"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xji-fg-f8K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="5U1-5J-X4e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5YI-li-uJi" secondAttribute="trailing" constant="20" id="HiW-7H-YCy"/>
+                            <constraint firstItem="oo5-Ic-n56" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="QQ1-Tj-51u"/>
+                            <constraint firstItem="5YI-li-uJi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Qk4-5Z-1Ed"/>
+                            <constraint firstItem="oo5-Ic-n56" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WHx-Mo-FLH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xji-fg-f8K" secondAttribute="bottom" constant="20" id="e29-sF-FWn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ed7-zg-yb1" secondAttribute="trailing" constant="20" id="oNl-PY-2ob"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xji-fg-f8K" secondAttribute="trailing" constant="40" id="okW-Ug-JKC"/>
+                            <constraint firstItem="xji-fg-f8K" firstAttribute="top" secondItem="5YI-li-uJi" secondAttribute="bottom" constant="10" id="qU5-MT-oZs"/>
+                            <constraint firstItem="ed7-zg-yb1" firstAttribute="top" secondItem="oo5-Ic-n56" secondAttribute="bottom" constant="8" id="qeO-Yf-Yzj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oo5-Ic-n56" secondAttribute="trailing" constant="20" id="vDH-bb-NyK"/>
+                            <constraint firstItem="5YI-li-uJi" firstAttribute="top" secondItem="ed7-zg-yb1" secondAttribute="bottom" constant="20" id="xSZ-im-cPe"/>
+                            <constraint firstItem="ed7-zg-yb1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zTY-JX-zwb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iv" destination="ed7-zg-yb1" id="Q3r-V5-R20"/>
+                        <outlet property="launchML" destination="p7g-TI-bgj" id="fXU-Zj-FzL"/>
+                        <outlet property="predictionLbl" destination="5YI-li-uJi" id="PLQ-9q-Esd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.608695652173921" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
